@@ -1,4 +1,4 @@
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
 
 const links = {
   Product: [
@@ -36,9 +36,13 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-white" />
-              </div>
+              <Image
+                src="/other/campusbook_logo.png"
+                alt="CampusBook"
+                width={36}
+                height={36}
+                className="rounded-xl"
+              />
               <span className="text-xl font-extrabold">CampusBook</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">

@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/other/favicon.ico",
+    apple: "/other/campusbook_logo.png",
+  },
   title: "CampusBook — The Social Platform for University Students",
   description:
     "Connect, collaborate, and campus-navigate with CampusBook. Real-time messaging, interest communities, club events, smart feeds, and campus maps — all in one app.",

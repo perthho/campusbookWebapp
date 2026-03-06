@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, BookOpen } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -33,9 +34,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${scrolled ? "bg-gray-900" : "bg-white/20"}`}>
-              <BookOpen className="w-5 h-5 text-white" />
-            </div>
+            <Image
+              src="/other/campusbook_logo.png"
+              alt="CampusBook"
+              width={42}
+              height={42}
+              className="rounded-lg"
+            />
             <span className={`text-xl font-bold transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}>CampusBook</span>
           </a>
 
