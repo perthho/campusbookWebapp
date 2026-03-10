@@ -4,7 +4,7 @@ const links = {
   Product: [
     { label: "Features", href: "#features" },
     { label: "Screenshots", href: "#screenshots" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Testimonials", href: "#testimonials" },
     { label: "Download", href: "#download" },
   ],
   Company: [
@@ -20,10 +20,10 @@ const links = {
     { label: "Community", href: "#" },
   ],
   Legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Cookie Policy", href: "#" },
-    { label: "GDPR", href: "#" },
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Cookie Policy", href: "/cookie-policy" },
+    { label: "GDPR", href: "/privacy-policy#your-rights" },
   ],
 };
 
