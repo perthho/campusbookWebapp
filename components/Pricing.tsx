@@ -20,7 +20,7 @@ const plans = [
       "Basic notifications",
     ],
     cta: "Download Free",
-    ctaHref: "https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk",
+    ctaHref: "https://drive.google.com/uc?export=download&id=1yUtQDtbt2R-60IEMnLBSKKNsROKv4Clv",
   },
   {
     name: "Campus Pro",
@@ -39,7 +39,7 @@ const plans = [
       "Ad-free experience",
     ],
     cta: "Get Campus Pro",
-    ctaHref: "https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk",
+    ctaHref: "https://drive.google.com/uc?export=download&id=1yUtQDtbt2R-60IEMnLBSKKNsROKv4Clv",
   },
   {
     name: "Club / Society",

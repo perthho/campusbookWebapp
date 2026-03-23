@@ -44,8 +44,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <a
-                href="https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk"
-                download
+                href="https://drive.google.com/uc?export=download&id=1yUtQDtbt2R-60IEMnLBSKKNsROKv4Clv"
                 className="flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-bold rounded-2xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 Android
