@@ -64,9 +64,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="/api/download"
-              target="_blank"
-              rel="noreferrer"
+              href="https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk"
               className="px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 hover:-translate-y-0.5"
             >
               Download Now
@@ -99,9 +97,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/api/download"
-              target="_blank"
-              rel="noreferrer"
+              href="https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk"
               onClick={() => setOpen(false)}
               className="block mt-2 px-3 py-2 rounded-full text-center bg-gray-900 text-white text-sm font-semibold"
             >
