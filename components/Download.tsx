@@ -43,7 +43,8 @@ export default function Download() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           {/* Android */}
           <a
-            href="https://drive.google.com/uc?export=download&id=1yUtQDtbt2R-60IEMnLBSKKNsROKv4Clv"
+            href="https://github.com/perthho/campusbookWebapp/releases/download/v1.0.0/campusbook.apk"
+            download
             className="flex items-center gap-4 px-7 py-4 bg-white text-gray-900 rounded-2xl hover:shadow-2xl hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1 min-w-[200px] justify-center sm:justify-start"
           >
             <div className="text-left">
