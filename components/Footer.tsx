@@ -5,7 +5,7 @@ const links = {
     { label: "Features", href: "#features" },
     { label: "Screenshots", href: "#screenshots" },
     { label: "Testimonials", href: "#testimonials" },
-    { label: "Download", href: "https://drive.google.com/uc?export=download&id=1yUtQDtbt2R-60IEMnLBSKKNsROKv4Clv" },
+    { label: "Download", href: "/campusbook.apk" },
   ],
   Company: [
     { label: "About Us", href: "#" },
