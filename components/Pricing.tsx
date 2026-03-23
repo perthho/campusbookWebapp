@@ -20,7 +20,7 @@ const plans = [
       "Basic notifications",
     ],
     cta: "Download Free",
-    ctaHref: "#download",
+    ctaHref: "/api/download",
   },
   {
     name: "Campus Pro",
@@ -39,7 +39,7 @@ const plans = [
       "Ad-free experience",
     ],
     cta: "Get Campus Pro",
-    ctaHref: "#download",
+    ctaHref: "/api/download",
   },
   {
     name: "Club / Society",

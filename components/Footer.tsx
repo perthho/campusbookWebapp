@@ -5,7 +5,7 @@ const links = {
     { label: "Features", href: "#features" },
     { label: "Screenshots", href: "#screenshots" },
     { label: "Testimonials", href: "#testimonials" },
-    { label: "Download", href: "#download" },
+    { label: "Download", href: "/api/download" },
   ],
   Company: [
     { label: "About Us", href: "#" },

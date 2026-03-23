@@ -64,7 +64,9 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#download"
+              href="/api/download"
+              target="_blank"
+              rel="noreferrer"
               className="px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 hover:-translate-y-0.5"
             >
               Download Now
@@ -97,7 +99,9 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#download"
+              href="/api/download"
+              target="_blank"
+              rel="noreferrer"
               onClick={() => setOpen(false)}
               className="block mt-2 px-3 py-2 rounded-full text-center bg-gray-900 text-white text-sm font-semibold"
             >
