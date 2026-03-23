@@ -2,8 +2,17 @@
 
 import Image from "next/image";
 import { ArrowDown, Star, Users, BookOpen } from "lucide-react";
+import { saveAs } from "file-saver";
 
 export default function Hero() {
+  const handleDownload = (e: React.MouseEvent) => {
+    e.preventDefault();
+    saveAs(
+      "https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk",
+      "CampusBook.apk"
+    );
+  };
+
   return (
     <section
       id="home"
@@ -43,12 +52,12 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <a
-                href="https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk"
-                className="flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-bold rounded-2xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              <button
+                onClick={handleDownload}
+                className="flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-bold rounded-2xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 outline-none"
               >
                 Android
-              </a>
+              </button>
               <div
                 className="flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white/50 font-bold rounded-2xl cursor-not-allowed"
                 title="iOS version coming soon"

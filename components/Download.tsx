@@ -1,8 +1,17 @@
 "use client";
 
 import { Star, Download as DownloadIcon, Smartphone } from "lucide-react";
+import { saveAs } from "file-saver";
 
 export default function Download() {
+  const handleDownload = (e: React.MouseEvent) => {
+    e.preventDefault();
+    saveAs(
+      "https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk",
+      "CampusBook.apk"
+    );
+  };
+
   return (
     <section
       id="download"
@@ -42,15 +51,15 @@ export default function Download() {
         {/* Download Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           {/* Android */}
-          <a
-            href="https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk"
-            className="flex items-center gap-4 px-7 py-4 bg-white text-gray-900 rounded-2xl hover:shadow-2xl hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1 min-w-[200px] justify-center sm:justify-start"
+          <button
+            onClick={handleDownload}
+            className="flex items-center gap-4 px-7 py-4 bg-white text-gray-900 rounded-2xl hover:shadow-2xl hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1 min-w-[200px] justify-center sm:justify-start outline-none"
           >
             <div className="text-left">
               <div className="text-xs text-gray-500">Download APK</div>
               <div className="text-lg font-bold">Android</div>
             </div>
-          </a>
+          </button>
 
           {/* iOS */}
           <div
