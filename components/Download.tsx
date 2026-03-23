@@ -1,6 +1,7 @@
 "use client";
 
 import { Star, Download as DownloadIcon, Smartphone } from "lucide-react";
+import { PRIMARY_APK_URL, navigateToApkWithFallback } from "../lib/download";
 
 export default function Download() {
   return (
@@ -43,7 +44,11 @@ export default function Download() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           {/* Android */}
           <a
-            href="https://github.com/perthho/campusbookWebapp/releases/download/v1.0.0/campusbook.apk"
+            href={PRIMARY_APK_URL}
+            onClick={async (event) => {
+              event.preventDefault();
+              await navigateToApkWithFallback();
+            }}
             download
             className="flex items-center gap-4 px-7 py-4 bg-white text-gray-900 rounded-2xl hover:shadow-2xl hover:bg-gray-50 transition-all duration-300 hover:-translate-y-1 min-w-[200px] justify-center sm:justify-start"
           >
@@ -63,21 +68,6 @@ export default function Download() {
               <div className="text-lg font-bold">iOS</div>
             </div>
           </div>
-        </div>
-
-        {/* Stats row */}
-        <div className="flex flex-wrap justify-center gap-8">
-          {[
-            { value: "50K+", label: "Active Students" },
-            { value: "200+", label: "Universities" },
-            { value: "99.9%", label: "Uptime" },
-            { value: "Free", label: "Forever" },
-          ].map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="text-3xl font-extrabold text-white">{s.value}</div>
-              <div className="text-sm text-white/50 mt-1">{s.label}</div>
-            </div>
-          ))}
         </div>
 
         <p className="mt-10 text-white/40 text-sm">

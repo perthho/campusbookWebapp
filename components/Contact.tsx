@@ -6,11 +6,37 @@ import { Send, Mail, MessageCircle, MapPin } from "lucide-react";
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would POST to an API
-    setSubmitted(true);
+
+    setErrorMessage("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setSubmitted(true);
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Failed to send message.";
+      setErrorMessage(message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -36,7 +62,7 @@ export default function Contact() {
               {
                 icon: Mail,
                 title: "Email Us",
-                value: "hello@campusbook.app",
+                value: "hello.campusbook@gmail.com",
                 sub: "We reply within 24 hours",
                 color: "bg-gray-100",
                 icolor: "text-gray-700",
@@ -74,7 +100,7 @@ export default function Contact() {
             <div className="pt-4 border-t border-gray-100">
               <p className="text-sm text-gray-500 mb-3">Follow us</p>
               <div className="flex gap-3">
-                {["Twitter", "Instagram", "LinkedIn", "Discord"].map((s) => (
+                {["X","LinkedIn", "Discord"].map((s) => (
                   <a
                     key={s}
                     href="#"
@@ -165,11 +191,15 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="w-full flex items-center justify-center gap-2 py-3.5 rounded-2xl bg-gray-900 text-white font-bold hover:shadow-xl hover:shadow-gray-300 transition-all duration-300 hover:-translate-y-0.5"
                 >
                   <Send className="w-4 h-4" />
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
+                {errorMessage && (
+                  <p className="text-sm text-red-600">{errorMessage}</p>
+                )}
               </form>
             )}
           </div>

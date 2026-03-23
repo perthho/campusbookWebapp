@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import { PRIMARY_APK_URL, navigateToApkWithFallback } from "../lib/download";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -64,7 +65,11 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="https://drive.google.com/uc?export=download&id=1yUtQDtbt2R-60IEMnLBSKKNsROKv4Clv"
+              href={PRIMARY_APK_URL}
+              onClick={async (event) => {
+                event.preventDefault();
+                await navigateToApkWithFallback();
+              }}
               className="px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 hover:-translate-y-0.5"
             >
               Download Now
@@ -97,8 +102,12 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://drive.google.com/uc?export=download&id=1yUtQDtbt2R-60IEMnLBSKKNsROKv4Clv"
-              onClick={() => setOpen(false)}
+              href={PRIMARY_APK_URL}
+              onClick={async (event) => {
+                event.preventDefault();
+                setOpen(false);
+                await navigateToApkWithFallback();
+              }}
               className="block mt-2 px-3 py-2 rounded-full text-center bg-gray-900 text-white text-sm font-semibold"
             >
               Download Now

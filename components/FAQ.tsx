@@ -5,10 +5,6 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Is CampusBook really free?",
-    a: "Yes! The Student Free plan is completely free forever with no ads. You get access to all core social features including feed, communities, chat, campus maps, clubs, and friend discovery.",
-  },
-  {
     q: "Do I need a university email to sign up?",
     a: "Yes, CampusBook requires a valid university email address (.edu or equivalent) to ensure the platform remains exclusively for students. This keeps the community safe and relevant.",
   },
