@@ -8,7 +8,7 @@ import { PRIMARY_APK_URL, navigateToApkWithFallback } from "../lib/download";
 const links = [
   { label: "Features", href: "#features" },
   { label: "Screenshots", href: "#screenshots" },
-  { label: "Testimonials", href: "#testimonials" },
+  // { label: "Testimonials", href: "#testimonials" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
