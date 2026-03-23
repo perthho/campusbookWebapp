@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import { saveAs } from "file-saver";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -22,14 +21,6 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const handleDownload = (e: React.MouseEvent) => {
-    e.preventDefault();
-    saveAs(
-      "https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk",
-      "CampusBook.apk"
-    );
-  };
 
   return (
     <header
@@ -72,12 +63,12 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={handleDownload}
-              className="px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 hover:-translate-y-0.5 outline-none"
+            <a
+              href="https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk"
+              className="px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 hover:-translate-y-0.5"
             >
               Download Now
-            </button>
+            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -105,15 +96,13 @@ export default function Navbar() {
                 {l.label}
               </a>
             ))}
-            <button
-              onClick={(e) => {
-                setOpen(false);
-                handleDownload(e);
-              }}
-              className="block mt-2 w-full px-3 py-2 rounded-full text-center bg-gray-900 text-white text-sm font-semibold outline-none"
+            <a
+              href="https://github.com/perthho/campusboo/releases/download/v1.0.0/campusbook.apk"
+              onClick={() => setOpen(false)}
+              className="block mt-2 px-3 py-2 rounded-full text-center bg-gray-900 text-white text-sm font-semibold"
             >
               Download Now
-            </button>
+            </a>
           </div>
         </div>
       )}
