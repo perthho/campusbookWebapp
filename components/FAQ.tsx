@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 const faqs = [
   {
     q: "Do I need a university email to sign up?",
-    a: "Yes, CampusBook requires a valid university email address (.edu or equivalent) to ensure the platform remains exclusively for students. This keeps the community safe and relevant.",
+    a: "Yes, CampusBook requires a valid university email address (@paruluniversity.ac.in) to ensure the platform remains exclusively for students. This keeps the community safe and relevant.",
   },
   {
     q: "How does the NSFW content moderation work?",
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: "Can I create my own community or club page?",
-    a: "Any student can create a community around any interest. For official club/society pages with a verified badge and analytics dashboard, you'll need the Club/Society plan. Contact us to get started.",
+    a: "Currently, any student can create a community around any interest. For official club/society pages with a verified badge and analytics dashboard, you'll need the Club/Society plan. Contact us to get started.",
   },
   {
     q: "How do I report a problem or abusive content?",
