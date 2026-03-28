@@ -423,7 +423,6 @@ export default function TermsOfServicePage() {
                 hello@campusbook.app
               </a>
             </p>
-            <p className="text-gray-500 text-sm">Offices: Lagos · Delhi · Singapore</p>
           </div>
         </section>
       </main>

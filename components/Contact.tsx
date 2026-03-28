@@ -52,7 +52,7 @@ export default function Contact() {
               {
                 icon: MapPin,
                 title: "Offices",
-                value: "Lagos · Delhi · Singapore",
+                value: "Delhi",
                 sub: "Distributed team, global mission",
                 color: "bg-gray-100",
                 icolor: "text-gray-700",

@@ -50,7 +50,7 @@ export default function Footer() {
             </p>
             {/* App badges */}
             <div className="flex flex-col gap-2">
-              <a href="https://github.com/perthho/campusbookWebapp/releases/download/v1.0.0/campusbook.apk" className="flex items-center gap-2 px-3 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-sm font-medium transition-colors">
+              <a href="/campusbook.apk" className="flex items-center gap-2 px-3 py-2 bg-white/10 hover:bg-white/20 rounded-xl text-sm font-medium transition-colors">
                 Android
               </a>
               <div className="flex items-center gap-2 px-3 py-2 bg-white/5 text-white/50 border border-white/5 rounded-xl text-sm font-medium cursor-not-allowed">
