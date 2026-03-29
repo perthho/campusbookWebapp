@@ -434,11 +434,10 @@ export default function PrivacyPolicyPage() {
             <p className="font-bold text-gray-900 mb-1">CampusBook</p>
             <p className="text-gray-600 text-sm mb-1">
               Email:{" "}
-              <a href="mailto:hello@campusbook.app" className="text-gray-900 font-semibold underline decoration-gray-300 hover:decoration-gray-600">
-                hello@campusbook.app
+              <a href="mailto:hello.campusbook@gmail.com" className="text-gray-900 font-semibold underline decoration-gray-300 hover:decoration-gray-600">
+                hello.campusbook@gmail.com
               </a>
             </p>
-            <p className="text-gray-500 text-sm">Offices: Lagos · Delhi · Singapore</p>
           </div>
         </section>
       </main>
