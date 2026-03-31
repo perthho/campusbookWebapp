@@ -1,4 +1,4 @@
-export const PRIMARY_APK_URL = "./application-dbfb0c77-d729-40e4-bf07-b3dbd963cc04.apk";
+export const PRIMARY_APK_URL = "https://expo.dev/artifacts/eas/9rq92B7PbzWz6ewXZj4Rid.apk";
 export const FALLBACK_APK_URL = "https://pub-8ac3edb731ba448eb769526003a152d7.r2.dev/campusbook/campusbook.apk";
 
 export async function navigateToApkWithFallback() {
