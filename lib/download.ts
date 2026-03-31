@@ -4,14 +4,7 @@ export const FALLBACK_APK_URL = "https://pub-8ac3edb731ba448eb769526003a152d7.r2
 export async function navigateToApkWithFallback() {
   if (typeof window === "undefined") return;
 
-  try {
-    const response = await fetch(PRIMARY_APK_URL, {
-      method: "HEAD",
-      cache: "no-store",
-    });
-
-    window.location.href = response.ok ? PRIMARY_APK_URL : FALLBACK_APK_URL;
-  } catch {
-    window.location.href = FALLBACK_APK_URL;
-  }
+  // Use PRIMARY_APK_URL directly - Expo URLs are reliable
+  // FALLBACK_APK_URL is available as backup if needed
+  window.location.href = PRIMARY_APK_URL;
 }
