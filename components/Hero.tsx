@@ -59,7 +59,7 @@ export default function Hero() {
           </div>
 
           {/* Right — Phone Mockup */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center">
             <div className="relative">
               {/* Glow */}
               <div className="absolute inset-0 rounded-[3rem] bg-white/20 blur-2xl scale-110" />
