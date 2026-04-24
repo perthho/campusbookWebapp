@@ -70,7 +70,11 @@ export default function Navbar() {
                 event.preventDefault();
                 await navigateToApkWithFallback();
               }}
-              className="px-5 py-2 rounded-full bg-gray-900 text-white text-sm font-semibold hover:shadow-lg hover:shadow-gray-300 transition-all duration-200 hover:-translate-y-0.5"
+              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 ${
+                scrolled
+                  ? "bg-gray-900 text-white hover:shadow-lg hover:shadow-gray-300"
+                  : "bg-white text-gray-900 hover:shadow-lg hover:shadow-white/20"
+              }`}
             >
               Download Now
             </a>
