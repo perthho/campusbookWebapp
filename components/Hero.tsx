@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, Star, Users, BookOpen } from "lucide-react";
+import { ArrowDown, Star } from "lucide-react";
+import { PRIMARY_APK_URL, navigateToApkWithFallback } from "../lib/download";
 
 export default function Hero() {
   return (
@@ -44,7 +45,11 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <a
-                href="/campusbook.apk"
+                href={PRIMARY_APK_URL}
+                onClick={async (event) => {
+                  event.preventDefault();
+                  await navigateToApkWithFallback();
+                }}
                 className="flex items-center gap-2 px-8 py-4 bg-white text-gray-900 font-bold rounded-2xl hover:bg-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 Android
