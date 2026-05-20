@@ -86,8 +86,7 @@ export default function PrivacyPolicyPage() {
           <p className="text-gray-600 leading-relaxed">
             CampusBook is an independent social platform built exclusively for university students.
             We currently operate under the trading name <strong className="text-gray-800">CampusBook</strong> and
-            are in the process of formal company registration. We have team members in Lagos (Nigeria),
-            Delhi (India), and Singapore. For all privacy-related matters, you can reach us at{" "}
+            are in the process of formal company registration. For all privacy-related matters, you can reach us at{" "}
             <a href="mailto:hello@campusbook.app" className="text-gray-900 font-semibold underline decoration-gray-300 hover:decoration-gray-600">
               hello@campusbook.app
             </a>.

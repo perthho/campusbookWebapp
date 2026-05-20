@@ -87,6 +87,14 @@ export default function Contact() {
                 color: "bg-gray-100",
                 icolor: "text-gray-700",
               },
+              {
+                icon: MapPin,
+                title: "Offices",
+                value: "Delhi",
+                sub: "Distributed team, global mission",
+                color: "bg-gray-100",
+                icolor: "text-gray-700",
+              },
             ].map((c) => (
               <div key={c.title} className="flex items-start gap-4">
                 <div className={`w-12 h-12 rounded-xl ${c.color} flex items-center justify-center flex-shrink-0`}>

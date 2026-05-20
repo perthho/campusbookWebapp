@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, Star, Users, BookOpen } from "lucide-react";
+import { ArrowDown, Star } from "lucide-react";
 import { PRIMARY_APK_URL, navigateToApkWithFallback } from "../lib/download";
 
 export default function Hero() {
@@ -64,7 +64,7 @@ export default function Hero() {
           </div>
 
           {/* Right — Phone Mockup */}
-          <div className="flex justify-center lg:justify-end">
+          <div className="flex justify-center">
             <div className="relative">
               {/* Glow */}
               <div className="absolute inset-0 rounded-[3rem] bg-white/20 blur-2xl scale-110" />
